@@ -1,0 +1,12 @@
+.welcome-conteiner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome-conteiner h1 {
+  margin-bottom: 10px;
+}
+
+.welcome-conteiner h3 {
+  margin-bottom: 40px;
+}

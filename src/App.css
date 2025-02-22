@@ -1,0 +1,27 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    165deg,
+    rgba(238, 174, 202, 1) 33%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.taskLisrConteiner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #e9dfb5;
+  margin: 100px 300px;
+  min-width: 700px;
+  padding: 20px;
+  border-radius: 35px;
+}

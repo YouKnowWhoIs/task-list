@@ -1,3 +1,7 @@
+.inputConteiner {
+  margin-bottom: 15px;
+}
+
 .inputConteiner input {
   background-color: #fff;
   width: 500px;
@@ -5,6 +9,8 @@
   border: 0px;
   padding: 5px 10px;
   border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.25s;
 }
 .inputConteiner input:hover,
 .inputConteiner input:focus {
@@ -16,10 +22,19 @@
   width: 85px;
   height: 35px;
   margin-left: 20px;
-  border: 1px solid #eeaeca;
+  border: 2px solid #eeaeca;
   border-radius: 15px;
+  transition: background-color 0.35s;
+  transition: border 0.35s;
 }
 .inputConteiner button:hover {
   background-color: #dea0bb;
-  border: 1px solid #80a4cc;
+  border: 2px solid #80a4cc;
+}
+
+.errorMessage {
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  transition: border 0.35s;
 }

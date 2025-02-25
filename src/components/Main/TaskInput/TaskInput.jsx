@@ -1,19 +1,38 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import css from "./TaskInput.module.css";
-import ToDoList from "../ToDoList/ToDoList";
 
-const TaskInput = () => {
+const TaskInput = ({ setTask }) => {
   const [inputValue, setInputValue] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    console.log(event.target.value);
   };
 
-  const handleButtonSubmit = () => {
-    ToDoList(setInputValue);
+  const addTask = () => {
+    if (inputValue.trim() === "") {
+      setIsError(true);
+      return;
+    }
+
+    setTask((prev) => [...prev, inputValue]);
+
     setInputValue("");
-    console.log("hello");
+  };
+
+  const handleKeyPressEnter = (event) => {
+    if (event.key === "Enter") {
+      setIsError(false);
+
+      addTask();
+    }
+  };
+
+  const handleButtonSubmit = (event) => {
+    event.preventDefault();
+    setIsError(false);
+    addTask();
   };
 
   return (
@@ -22,13 +41,22 @@ const TaskInput = () => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
+        onKeyDown={handleKeyPressEnter}
         placeholder="Task name"
       />
       <button type="submit" onClick={handleButtonSubmit}>
         Add
       </button>
+
+      {isError && (
+        <span className={css.errorMessage}>Please, enter the words</span>
+      )}
     </div>
   );
+};
+
+TaskInput.propTypes = {
+  setTask: PropTypes.func.isRequired, // Очікуємо функцію
 };
 
 export default TaskInput;

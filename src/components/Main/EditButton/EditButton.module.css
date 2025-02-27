@@ -1,0 +1,16 @@
+.buttonEdit {
+  margin: 10px 0 0 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  height: 35px;
+  transition: background-color 0.25s;
+}
+
+.buttonEdit {
+  border: 2px solid #8371eb;
+  background-color: #aaa9ee;
+}
+.buttonEdit:hover {
+  border: 2px solid #7a57e4;
+  background-color: #a38bef;
+}

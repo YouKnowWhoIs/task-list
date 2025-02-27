@@ -7,6 +7,9 @@
   width: 500px;
   height: 35px;
   border: 0px;
+  font-size: large;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
   padding: 5px 10px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -24,6 +27,9 @@
   margin-left: 20px;
   border: 2px solid #eeaeca;
   border-radius: 15px;
+  font-size: medium;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
   transition: background-color 0.35s;
   transition: border 0.35s;
 }

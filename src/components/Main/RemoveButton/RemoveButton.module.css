@@ -1,0 +1,16 @@
+.buttonRemove {
+  margin: 10px 0 0 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  height: 35px;
+  transition: background-color 0.25s;
+}
+
+.buttonRemove {
+  border: 2px solid #eb7171;
+  background-color: #eea9a9;
+}
+.buttonRemove:hover {
+  border: 2px solid #e45757;
+  background-color: #ef8b8b;
+}

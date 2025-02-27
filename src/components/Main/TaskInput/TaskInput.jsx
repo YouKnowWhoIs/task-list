@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import css from "./TaskInput.module.css";
 
-const TaskInput = ({ setTask }) => {
+const TaskInput = ({ addTask }) => {
   const [inputValue, setInputValue] = useState("");
   const [isError, setIsError] = useState(false);
 
@@ -10,29 +10,23 @@ const TaskInput = ({ setTask }) => {
     setInputValue(event.target.value);
   };
 
-  const addTask = () => {
+  const handleButtonSubmit = (event) => {
+    event.preventDefault();
+
     if (inputValue.trim() === "") {
       setIsError(true);
       return;
     }
 
-    setTask((prev) => [...prev, inputValue]);
-
+    addTask(inputValue);
     setInputValue("");
+    setIsError(false);
   };
 
   const handleKeyPressEnter = (event) => {
     if (event.key === "Enter") {
-      setIsError(false);
-
-      addTask();
+      handleButtonSubmit(event);
     }
-  };
-
-  const handleButtonSubmit = (event) => {
-    event.preventDefault();
-    setIsError(false);
-    addTask();
   };
 
   return (
@@ -56,7 +50,7 @@ const TaskInput = ({ setTask }) => {
 };
 
 TaskInput.propTypes = {
-  setTask: PropTypes.func.isRequired, // Очікуємо функцію
+  addTask: PropTypes.func.isRequired, // Очікуємо функцію додавання завдання
 };
 
 export default TaskInput;

@@ -1,28 +1,20 @@
-import PropTypes from "prop-types";
+import TaskItem from "../TaskItem/TaskItems";
 import css from "./TaskList.module.css";
+import PropTypes from "prop-types";
 
-const TaskList = ({ task }) => {
+const TaskList = ({ tasks, setTasks }) => {
   return (
     <ul className={css.TaskListConteiner}>
-      {task.map((task, index) => (
-        <li className={css.list} key={index}>
-          <p className={css.takstList}>{task}</p>
-          <span className={css.buttonConteiner}>
-            <button type="click" className={css.buttonEdit}>
-              Edit
-            </button>
-            <button type="click" className={css.buttonRemove}>
-              Remove
-            </button>
-          </span>
-        </li>
+      {tasks.map((task) => (
+        <TaskItem key={task.id} task={task} setTasks={setTasks} />
       ))}
     </ul>
   );
 };
 
 TaskList.propTypes = {
-  task: PropTypes.array.isRequired, // Очікуємо масив
+  tasks: PropTypes.object.isRequired,
+  setTasks: PropTypes.func.isRequired,
 };
 
 export default TaskList;

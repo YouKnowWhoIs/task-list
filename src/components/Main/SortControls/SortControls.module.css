@@ -1,0 +1,6 @@
+.SortControlsConteiner {
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+  justify-content: center;
+}

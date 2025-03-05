@@ -50,7 +50,7 @@ const TaskInput = ({ addTask }) => {
 };
 
 TaskInput.propTypes = {
-  addTask: PropTypes.func.isRequired, // Очікуємо функцію додавання завдання
+  addTask: PropTypes.func.isRequired,
 };
 
 export default TaskInput;

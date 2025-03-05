@@ -56,6 +56,7 @@ const TaskItem = ({ task, setTasks }) => {
           onChange={handleCheckedChange}
         />
       </span>
+      <span className={css.dateCreate}>{task.Date}</span>
     </li>
   );
 };

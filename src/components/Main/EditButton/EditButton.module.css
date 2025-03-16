@@ -1,16 +1,16 @@
 .buttonEdit {
-  margin: 10px 0 0 0;
-  padding: 8px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
-  height: 35px;
-  transition: background-color 0.25s;
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 3px solid #8371eb;
+  background-color: #aaa9ee;
+  transition: background-color 0.65s, border 0.65s, color 0.65s;
 }
 
-.buttonEdit {
-  border: 2px solid #8371eb;
-  background-color: #aaa9ee;
-}
 .buttonEdit:hover {
-  border: 2px solid #7a57e4;
-  background-color: #a38bef;
+  border: 3px solid rgb(187, 220, 244);
+  background-color: rgb(62 126 172);
+  color: #fff;
 }

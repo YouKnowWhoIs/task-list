@@ -1,22 +1,12 @@
-import { useEffect, useState } from "react";
-import TaskInput from "../TaskInput/TaskInput.jsx";
+import { useState } from "react";
+import PropTypes from "prop-types";
+import AddButton from "../AddButton/AddButton.jsx";
 import TaskList from "../TaskList/TaskList.jsx";
 import SortControls from "../SortControls/SortControls.jsx";
 
-const TaskBoard = () => {
-  const [tasks, setTasks] = useState(() => {
-    return JSON.parse(localStorage.getItem("tasks")) || [];
-  });
+const TaskBoard = ({ tasks, setTasks }) => {
   const [selectedValue, setSelectedValue] = useState("all");
-  const [selectedSort, setSelectedSort] = useState("");
-
-  useEffect(() => {
-    if (tasks.length === 0) {
-      localStorage.removeItem("tasks");
-    } else {
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
-  }, [tasks]);
+  const [selectedSort, setSelectedSort] = useState("new");
 
   const addTask = (taskTest) => {
     const newTask = {
@@ -39,7 +29,7 @@ const TaskBoard = () => {
 
   return (
     <main>
-      <TaskInput addTask={addTask} />
+      <AddButton addTask={addTask} />
       <SortControls
         selectedValue={selectedValue}
         selectedSort={selectedSort}
@@ -54,6 +44,11 @@ const TaskBoard = () => {
       />
     </main>
   );
+};
+
+TaskBoard.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  setTasks: PropTypes.array.isRequired,
 };
 
 export default TaskBoard;

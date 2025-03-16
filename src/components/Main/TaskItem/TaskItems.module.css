@@ -1,21 +1,22 @@
 .list {
   list-style: none;
   text-align: left;
-  border: 1px solid #fff;
+  border: 2px solid #f2f3f5;
   border-radius: 8px;
-  background-color: #e9d0b5;
+  background-color: #fbaca4;
   padding: 10px 10px 10px 10px;
-  transition: background-color 0.35s;
+  transition: background-color 0.75s;
+  cursor: pointer;
 }
 .list:hover {
-  background-color: #eed9c4;
+  background-color: #ffdcd4;
 }
 
 .takstList {
   word-wrap: break-word;
   white-space: normal;
-  font-size: medium;
-  letter-spacing: 0.3px;
+  font-size: large;
+  letter-spacing: 0.5px;
 }
 
 .buttonConteiner {

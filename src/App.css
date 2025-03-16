@@ -5,11 +5,11 @@
 }
 
 body {
-  background: rgb(238, 174, 202);
+  background: rgb(233, 139, 130);
   background: linear-gradient(
     165deg,
-    rgba(238, 174, 202, 1) 33%,
-    rgba(148, 187, 233, 1) 100%
+    rgb(233, 139, 130, 1) 33%,
+    rgba(62, 126, 172, 1) 100%
   );
   background-attachment: fixed;
   background-size: cover;
@@ -18,10 +18,7 @@ body {
 .taskLisrConteiner {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  background-color: #e9dfb5;
-  margin: 100px 200px;
-  min-width: 700px;
+  background-color: #ffdcd4;
   padding: 20px;
   border-radius: 35px;
 }
@@ -33,4 +30,23 @@ button {
 p {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .taskLisrConteiner {
+    margin: 50px 20px;
+    min-width: 280px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .taskLisrConteiner {
+    margin: 80px 50px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .taskLisrConteiner {
+    margin: 100px 100px;
+  }
 }

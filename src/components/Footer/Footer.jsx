@@ -1,7 +1,9 @@
+import css from "./FooterText.module.css";
+
 const Footer = () => {
   return (
     <footer>
-      <div>To do list</div>
+      <div className={css.footerText}>To do list</div>
     </footer>
   );
 };

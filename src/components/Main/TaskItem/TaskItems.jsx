@@ -1,27 +1,10 @@
 import css from "./TaskItems.module.css";
 import PropTypes from "prop-types";
-import RemoveButton from "../RemoveButton/RemoveButton.jsx";
-import EditButton from "../EditButton/EditButton.jsx";
 import { useState } from "react";
+import ModalDetails from "../ModalDetails/ModalDetails";
 
 const TaskItem = ({ task, setTasks }) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [newText, setNewText] = useState(task.text || "");
-
-  const handleSave = () => {
-    setTasks((prevTasks) =>
-      prevTasks.map((t) => (t.id === task.id ? { ...t, text: newText } : t))
-    );
-    setIsEditing(false);
-  };
-
-  const handleRemove = () => {
-    setTasks((prevTasks) => prevTasks.filter((t) => t.id !== task.id));
-  };
-
-  const handleTextareaChange = (event) => {
-    setNewText(event.target.value);
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleCheckedChange = () => {
     setTasks((prevTask) =>
@@ -31,33 +14,28 @@ const TaskItem = ({ task, setTasks }) => {
     );
   };
 
-  return (
-    <li className={css.list}>
-      {isEditing ? (
-        <textarea
-          type="text"
-          value={newText ?? ""}
-          onChange={handleTextareaChange}
-        />
-      ) : (
-        <p className={css.takstList}>{task.text}</p>
-      )}
+  const handleListOpen = () => {
+    setIsOpen(true);
+  };
 
-      <span className={css.buttonConteiner}>
-        <EditButton
-          isEditing={isEditing}
-          setIsEditing={setIsEditing}
-          handleSave={handleSave}
-        />
-        <RemoveButton onRemove={handleRemove} />
-        <input
-          type="checkbox"
-          checked={task.checked}
-          onChange={handleCheckedChange}
-        />
-      </span>
-      <span className={css.dateCreate}>{task.Date}</span>
-    </li>
+  return (
+    <>
+      <li className={css.list} onClick={handleListOpen}>
+        <p className={css.takstList}>{task.text}</p>
+        <span className={css.buttonConteiner}>
+          <input
+            type="checkbox"
+            checked={task.checked}
+            onChange={handleCheckedChange}
+          />
+        </span>
+        <span className={css.dateCreate}>{task.Date}</span>
+      </li>
+
+      {isOpen && (
+        <ModalDetails task={task} setTasks={setTasks} setIsOpen={setIsOpen} />
+      )}
+    </>
   );
 };
 

@@ -1,12 +1,21 @@
-.welcome-conteiner {
+.welcomeConteiner {
   text-align: center;
   margin-top: 20px;
 }
 
-.welcome-conteiner h1 {
+.welkomePanel {
+  justify-content: center;
+}
+
+.toggleConteiner {
+  float: right;
+  margin-top: -50px;
+}
+
+.welcomeConteiner h1 {
   margin-bottom: 10px;
 }
 
-.welcome-conteiner h3 {
-  margin-bottom: 40px;
+.welcomeConteiner h3 {
+  margin-bottom: 15px;
 }

@@ -3,7 +3,7 @@ import css from "./DateSort.module.css";
 
 const DateSort = ({ selectedSort, handleSortChange }) => {
   return (
-    <div className={css.DateSortTogle}>
+    <div className={css.DateSortButton}>
       <label>
         <input
           type="radio"
@@ -14,7 +14,15 @@ const DateSort = ({ selectedSort, handleSortChange }) => {
             handleSortChange("new");
           }}
         />
-        New
+        <span
+          className={
+            selectedSort === "new"
+              ? css.DateSortButtonDecorationActive
+              : css.DateSortButtonDecoration
+          }
+        >
+          New
+        </span>
       </label>
       <label>
         <input
@@ -26,7 +34,15 @@ const DateSort = ({ selectedSort, handleSortChange }) => {
             handleSortChange("old");
           }}
         />
-        Old
+        <span
+          className={
+            selectedSort === "old"
+              ? css.DateSortButtonDecorationActive
+              : css.DateSortButtonDecoration
+          }
+        >
+          Old
+        </span>
       </label>
     </div>
   );

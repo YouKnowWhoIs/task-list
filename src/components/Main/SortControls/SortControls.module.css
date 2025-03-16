@@ -1,6 +1,35 @@
 .SortControlsConteiner {
-  display: flex;
-  flex-direction: row;
-  gap: 130px;
   justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .SortControlsConteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 640px) {
+  .SortControlsConteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 992px) {
+  .SortControlsConteiner {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .SortControlsConteiner {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
 }

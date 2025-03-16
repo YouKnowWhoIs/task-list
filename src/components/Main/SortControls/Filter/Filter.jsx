@@ -3,7 +3,7 @@ import css from "./Filter.module.css";
 
 const Filter = ({ selectedValue, handleFilterChange }) => {
   return (
-    <div className={css.filterTogle}>
+    <div className={css.filterButton}>
       <label>
         <input
           type="radio"
@@ -12,7 +12,15 @@ const Filter = ({ selectedValue, handleFilterChange }) => {
           checked={selectedValue === "all"}
           onChange={() => handleFilterChange("all")}
         />
-        All
+        <span
+          className={
+            selectedValue === "all"
+              ? css.filterButtonDecoratonActive
+              : css.filterButtonDecoraton
+          }
+        >
+          All
+        </span>
       </label>
       <label>
         <input
@@ -22,7 +30,15 @@ const Filter = ({ selectedValue, handleFilterChange }) => {
           checked={selectedValue === "complete"}
           onChange={() => handleFilterChange("complete")}
         />
-        Complet
+        <span
+          className={
+            selectedValue === "complete"
+              ? css.filterButtonDecoratonActive
+              : css.filterButtonDecoraton
+          }
+        >
+          Complet
+        </span>
       </label>
       <label>
         <input
@@ -32,7 +48,15 @@ const Filter = ({ selectedValue, handleFilterChange }) => {
           checked={selectedValue === "notComplete"}
           onChange={() => handleFilterChange("notComplete")}
         />
-        Not Complet
+        <span
+          className={
+            selectedValue === "notComplete"
+              ? css.filterButtonDecoratonActive
+              : css.filterButtonDecoraton
+          }
+        >
+          Not Complet
+        </span>
       </label>
     </div>
   );

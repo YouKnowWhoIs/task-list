@@ -1,0 +1,95 @@
+.taskInputModalConteiner {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: auto;
+  transition: background-color 0.65s;
+}
+
+.taskInputModalItems {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: var(--bc-color-modal);
+  border-radius: 25px;
+  width: 60%;
+  z-index: 15;
+  transition: background-color 0.65s;
+}
+
+.taskInputModalItems textarea {
+  resize: none;
+  min-width: 300px;
+  background-color: #f2f3f5;
+  border: 0px;
+  font-size: large;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.taskInputModalItems button {
+  background-color: var(--color-but);
+  width: 100px;
+  padding: 10px 15px;
+  border: 3px solid #dea0bb;
+  color: #f2f3f5;
+  border-radius: 15px;
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.65s, background-color 0.65s, border 0.65s;
+  margin-top: auto;
+}
+.taskInputModalItems button:hover {
+  color: #111;
+  background-color: #dea0bb;
+  border: 3px solid var(--color-but);
+}
+
+.errorMessage {
+  color: #af5f58;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .taskInputModalItems {
+    margin: 100px 25px;
+    min-width: 320px;
+  }
+
+  .taskInputModalItems textarea {
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .taskInputModalItems {
+    margin: 110px 60px;
+  }
+
+  .taskInputModalItems textarea {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .taskInputModalItems {
+    margin: 100px 80px;
+  }
+
+  .taskInputModalItems textarea {
+    height: 370px;
+  }
+}

@@ -1,0 +1,57 @@
+.list {
+  list-style: none;
+  text-align: left;
+  border: 2px solid #f2f3f5;
+  border-radius: 8px;
+  background-color: var(--bc-color-list);
+  padding: 10px 10px 10px 10px;
+  transition: background-color 0.75s;
+  cursor: pointer;
+}
+.list:hover {
+  background-color: var(--bc-color-list-hov);
+}
+
+.takstList {
+  word-wrap: break-word;
+  white-space: pre-line;
+  font-size: large;
+  letter-spacing: 0.5px;
+}
+
+.buttonConteiner {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  float: left;
+}
+
+.list textarea {
+  background-color: #fff;
+  min-width: 98%;
+  height: 100px;
+  border: 0px;
+  padding: 0 6px;
+  font-size: large;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  resize: vertical;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.25s;
+}
+.list textarea:hover,
+.list textarea:focus {
+  background-color: #dfddfd;
+}
+
+.buttonConteiner input {
+  width: 30px;
+  height: 30px;
+  margin: 12px 0 0 10px;
+}
+
+.dateCreate {
+  float: right;
+  margin: 20px 0 0 0;
+}

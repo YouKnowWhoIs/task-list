@@ -1,0 +1,82 @@
+.filterButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filterButton input {
+  display: none;
+}
+
+.filterButton label {
+  font-size: large;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.filterButtonDecoraton {
+  padding: 3px 10px;
+  border: 3px solid #d5756d;
+  color: #d5756d;
+  border-top: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: border 0.65s, background-color 0.65s;
+}
+.filterButtonDecoraton:hover {
+  border: 3px solid #3e7eac;
+  background-color: rgba(126, 116, 134, 0.237);
+  border-top: none;
+}
+
+.filterButtonDecoratonActive {
+  padding: 3px 10px;
+  border: 3px solid #3e7eac;
+  color: #3e7eac;
+  border-top: none;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+  .filterButton {
+    gap: 10px;
+  }
+
+  .filterButton label {
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 640px) {
+  .filterButton {
+    gap: 10px;
+  }
+
+  .filterButton label {
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 992px) {
+  .filterButton {
+    gap: 20px;
+  }
+
+  .filterButton label {
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .filterButton {
+    gap: 30px;
+  }
+
+  .filterButton label {
+    font-size: large;
+  }
+}

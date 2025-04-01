@@ -3,18 +3,18 @@
   text-align: left;
   border: 2px solid #f2f3f5;
   border-radius: 8px;
-  background-color: #fbaca4;
+  background-color: var(--bc-color-list);
   padding: 10px 10px 10px 10px;
   transition: background-color 0.75s;
   cursor: pointer;
 }
 .list:hover {
-  background-color: #ffdcd4;
+  background-color: var(--bc-color-list-hov);
 }
 
 .takstList {
   word-wrap: break-word;
-  white-space: normal;
+  white-space: pre-line;
   font-size: large;
   letter-spacing: 0.5px;
 }

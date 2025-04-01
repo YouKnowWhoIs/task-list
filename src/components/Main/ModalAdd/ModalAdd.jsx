@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import css from "./ModalAdd.module.css";
 import { useState } from "react";
+import ScrollBody from "../ScrollBody/ScrollBody";
 
 const ModalTaskInput = ({ addTask, setIsOpen }) => {
   const [inputValue, setInputValue] = useState("");
   const [isError, setIsError] = useState(false);
+
+  ScrollBody(true);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -52,7 +55,7 @@ const ModalTaskInput = ({ addTask, setIsOpen }) => {
 
 ModalTaskInput.propTypes = {
   addTask: PropTypes.func.isRequired,
-  setIsOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 };
 
 export default ModalTaskInput;

@@ -29,15 +29,14 @@
 }
 .filterButtonDecoraton:hover {
   border: 3px solid #3e7eac;
-  background-color: #f2f3f5;
+  background-color: rgba(126, 116, 134, 0.237);
   border-top: none;
 }
 
 .filterButtonDecoratonActive {
   padding: 3px 10px;
   border: 3px solid #3e7eac;
-  background-color: #f2f3f5;
-  color: #d5756d;
+  color: #3e7eac;
   border-top: none;
   font-weight: 700;
 }

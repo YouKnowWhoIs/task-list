@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ToggleTeam from "../ToggleTeam/ToggleTeam";
+import ThemeToggle from "../ThemeToggle/ThemeToggle.jsx";
 import css from "./Welcome.module.css";
 
 const Welcome = ({ tasks }) => {
@@ -9,7 +9,7 @@ const Welcome = ({ tasks }) => {
         <div className={css.welkomePanel}>
           <h1>Welkome!</h1>
           <span className={css.toggleConteiner}>
-            <ToggleTeam />
+            <ThemeToggle />
           </span>
         </div>
         <h3>Your total tasks: {tasks.length}</h3>

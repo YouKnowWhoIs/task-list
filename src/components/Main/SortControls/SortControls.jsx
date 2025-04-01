@@ -24,8 +24,8 @@ const SortControls = ({
 };
 
 SortControls.propTypes = {
-  selectedValue: PropTypes.array.isRequired,
-  selectedSort: PropTypes.array.isRequired,
+  selectedValue: PropTypes.string.isRequired,
+  selectedSort: PropTypes.string.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
   handleSortChange: PropTypes.func.isRequired,
 };

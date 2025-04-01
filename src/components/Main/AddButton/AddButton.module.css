@@ -4,10 +4,10 @@
 }
 
 .addButtonConteiner button {
-  background-color: #3e7eac;
+  background-color: var(--color-but);
   width: 100px;
   height: 50px;
-  border: 3px solid #f2f3f5;
+  border: 3px solid #d5756d;
   color: #f2f3f5;
   text-align: center;
   border-radius: 15px;
@@ -19,6 +19,6 @@
 }
 .addButtonConteiner button:hover {
   color: #111;
-  background-color: #dea0bb;
-  border: 3px solid #3e7eac;
+  background-color: #d5756d;
+  border: 3px solid var(--color-but);
 }

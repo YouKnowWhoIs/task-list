@@ -48,7 +48,7 @@ const TaskBoard = ({ tasks, setTasks }) => {
 
 TaskBoard.propTypes = {
   tasks: PropTypes.array.isRequired,
-  setTasks: PropTypes.array.isRequired,
+  setTasks: PropTypes.func.isRequired,
 };
 
 export default TaskBoard;

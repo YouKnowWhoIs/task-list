@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import ModalDetails from "../ModalDetails/ModalDetails";
 
-const TaskItem = ({ task, setTasks }) => {
+const TaskItem = ({ id, task, setTasks }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCheckedChange = () => {
@@ -21,19 +21,25 @@ const TaskItem = ({ task, setTasks }) => {
   return (
     <>
       <li className={css.list} onClick={handleListOpen}>
-        <p className={css.takstList}>{task.text}</p>
+        <p className={css.takstList}>{task.text.trimEnd()}</p>
         <span className={css.buttonConteiner}>
           <input
             type="checkbox"
             checked={task.checked}
             onChange={handleCheckedChange}
+            onClick={(e) => e.stopPropagation()}
           />
         </span>
         <span className={css.dateCreate}>{task.Date}</span>
       </li>
 
       {isOpen && (
-        <ModalDetails task={task} setTasks={setTasks} setIsOpen={setIsOpen} />
+        <ModalDetails
+          id={id}
+          task={task}
+          setTasks={setTasks}
+          setIsOpen={setIsOpen}
+        />
       )}
     </>
   );
@@ -41,6 +47,7 @@ const TaskItem = ({ task, setTasks }) => {
 
 TaskItem.propTypes = {
   task: PropTypes.object.isRequired,
+  id: PropTypes.any.isRequired,
   setTasks: PropTypes.func.isRequired,
 };
 

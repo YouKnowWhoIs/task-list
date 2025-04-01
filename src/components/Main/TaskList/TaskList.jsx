@@ -20,14 +20,14 @@ const TaskList = ({ tasks, setTasks, selectedValue, selectedSort }) => {
   return (
     <ul className={css.TaskListConteiner}>
       {sortedTask.map((task) => (
-        <TaskItem key={task.id} task={task} setTasks={setTasks} />
+        <TaskItem key={task.id} id={task.id} task={task} setTasks={setTasks} />
       ))}
     </ul>
   );
 };
 
 TaskList.propTypes = {
-  tasks: PropTypes.object.isRequired,
+  tasks: PropTypes.array.isRequired,
   setTasks: PropTypes.func.isRequired,
   selectedValue: PropTypes.string.isRequired,
   selectedSort: PropTypes.string.isRequired,

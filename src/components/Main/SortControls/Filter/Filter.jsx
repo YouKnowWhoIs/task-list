@@ -63,7 +63,7 @@ const Filter = ({ selectedValue, handleFilterChange }) => {
 };
 
 Filter.propTypes = {
-  selectedValue: PropTypes.array.isRequired,
+  selectedValue: PropTypes.string.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
 };
 

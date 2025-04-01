@@ -3,10 +3,13 @@ import css from "./ModalDetails.module.css";
 import EditButton from "../EditButton/EditButton";
 import RemoveButton from "../RemoveButton/RemoveButton";
 import { useState } from "react";
+import ScrollBody from "../ScrollBody/ScrollBody";
 
-const ModalDetails = ({ task, setTasks, setIsOpen }) => {
+const ModalDetails = ({ id, task, setTasks, setIsOpen }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(task.text || "");
+
+  ScrollBody(true);
 
   const handleSave = () => {
     setTasks((prevTasks) =>
@@ -49,7 +52,7 @@ const ModalDetails = ({ task, setTasks, setIsOpen }) => {
             setIsEditing={setIsEditing}
             handleSave={handleSave}
           />
-          <RemoveButton onRemove={handleRemove} />
+          <RemoveButton id={id} onRemove={handleRemove} />
         </div>
       </div>
     </div>
@@ -57,9 +60,10 @@ const ModalDetails = ({ task, setTasks, setIsOpen }) => {
 };
 
 ModalDetails.propTypes = {
+  id: PropTypes.any.isRequired,
   task: PropTypes.object.isRequired,
   setTasks: PropTypes.func.isRequired,
-  setIsOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 };
 
 export default ModalDetails;

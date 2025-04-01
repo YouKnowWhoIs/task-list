@@ -10,22 +10,23 @@
   height: 100%;
   z-index: 10;
   overflow: auto;
+  transition: background-color 0.65s;
 }
 
 .taskInputModalItems {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: #ffdcd4;
+  background-color: var(--bc-color-modal);
   border-radius: 25px;
   width: 60%;
   z-index: 15;
+  transition: background-color 0.65s;
 }
 
 .taskInputModalItems textarea {
   resize: none;
   min-width: 300px;
-  height: 82%;
   background-color: #f2f3f5;
   border: 0px;
   font-size: large;
@@ -36,10 +37,10 @@
 }
 
 .taskInputModalItems button {
-  background-color: #3e7eac;
+  background-color: var(--color-but);
   width: 100px;
   padding: 10px 15px;
-  border: 3px solid #f2f3f5;
+  border: 3px solid #dea0bb;
   color: #f2f3f5;
   border-radius: 15px;
   font-size: large;
@@ -51,7 +52,7 @@
 .taskInputModalItems button:hover {
   color: #111;
   background-color: #dea0bb;
-  border: 3px solid #f2f3f5;
+  border: 3px solid var(--color-but);
 }
 
 .errorMessage {
@@ -67,16 +68,28 @@
     margin: 100px 25px;
     min-width: 320px;
   }
+
+  .taskInputModalItems textarea {
+    height: 360px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .taskInputModalItems {
-    margin: 150px 80px;
+    margin: 110px 60px;
+  }
+
+  .taskInputModalItems textarea {
+    height: 350px;
   }
 }
 
 @media screen and (min-width: 993px) {
   .taskInputModalItems {
-    margin: 150px 120px;
+    margin: 100px 80px;
+  }
+
+  .taskInputModalItems textarea {
+    height: 370px;
   }
 }

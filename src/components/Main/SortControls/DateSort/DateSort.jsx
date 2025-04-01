@@ -49,7 +49,7 @@ const DateSort = ({ selectedSort, handleSortChange }) => {
 };
 
 DateSort.propTypes = {
-  selectedSort: PropTypes.array.isRequired,
+  selectedSort: PropTypes.string.isRequired,
   handleSortChange: PropTypes.func.isRequired,
 };
 
